@@ -450,6 +450,18 @@ model2 <- ergm(net ~ edges
 
 summary(model2)
 
+
+```
+
+```{r}
+# TODO MR-QAP model
+```
+
+TODO: I think this is going to happen when we compare them: When
+structural effects are not included in the ERGM, its estimates closely
+resemble those from MR-QAP.
+
+```{r}
 model3 <- ergm(net ~ edges 
                + nodematch("department")  
                + nodeocov("tenure")
@@ -469,3 +481,7 @@ hypothesis with an ERGM we need to include the following statistics: $$
 z_m(x) = \sum_{j,k,l} x^a_{jk} x^a_{jl} x^a_{lk},
 $$ where $(x_{ij})_{ij}$ denotes the adjacency matrix of the advice
 network.
+
+TODO: State your hypothesis and provide the mathematical formula and the
+**graphical representation** of the effect that you need to include in
+the ERGM to test the hypothesis
